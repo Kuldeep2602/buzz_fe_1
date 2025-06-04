@@ -3,11 +3,13 @@ import { Signup } from "./pages/Signup"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { Dashboard } from "./pages/dashboard"
 import  Error  from "./pages/Error"
+import { Home } from "./pages/Home"
 function App() {
   return <BrowserRouter>
     <Routes>
       <Route path="*" element={<Error />} />
-      <Route path="/" element={<Signup />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/signup" element={<Signup />} />
       <Route path="/signin" element={<Signin />} />
       <Route path="/dashboard" element={<Dashboard />} />
     </Routes>
