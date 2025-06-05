@@ -72,8 +72,9 @@ export function Signup() {
         const password = passwordRef.current?.value;
         try {
             // Remove any trailing slashes from BACKEND_URL to prevent double slashes
-            const baseUrl = BACKEND_URL.endsWith('/') ? BACKEND_URL.slice(0, -1) : BACKEND_URL;
-            await axios.post(`${baseUrl}/api/v1/signup`, {
+            // const baseUrl = BACKEND_URL.endsWith('/') ? BACKEND_URL.slice(0, -1) : BACKEND_URL;
+            // await axios.post(`${baseUrl}/api/v1/signup`, {
+            await axios.post(BACKEND_URL + "/api/v1/signup", {
                 username,
                 password
             });
